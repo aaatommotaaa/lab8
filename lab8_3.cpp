@@ -11,3 +11,47 @@
 "Brook"
 "Jinbe"
 */
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main(){
+    string character;
+    int age,height,price;
+    cout << "Enter your age: ";
+    cin >> age;
+    if (age <= 25){
+        cout << "Enter your height: ";
+        cin >> height;
+        if (height < 100){
+            character = "Chopper";
+        } else {
+            if (height < 180){
+                character = "Usopp";
+            } else {
+                cout << "Enter your bounty: ";
+                cin >> price;
+                if (price > 1.1*pow(10,9)){
+                    character = "Zoro";
+                } else {
+                    character = "Sanji";
+            }
+            }
+        }
+        cout << "Your character = " << character;
+    } else {
+        if (age<=60){
+            cout << "Enter your bounty: ";
+            cin >> price;
+            if (price>5*pow(10,8)){
+                character = "Jinbe";
+            } else {
+                character = "Franky";
+            }
+        } else {
+            character = "Brook";
+        }
+        cout << "Your character = " << character;
+    }
+}
